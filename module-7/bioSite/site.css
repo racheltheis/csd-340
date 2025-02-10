@@ -1,0 +1,75 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f1e3dd;
+    color: #667292;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    background-color: #8d9db6;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    background-color: #8d9db6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for Images with Captions */
+img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #8d9db6;
+}
+
+/* Links */
+a {
+    color: #667292;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #bccad6;
+}
+
