@@ -1,0 +1,54 @@
+<!--
+Rachel Theis
+Module 9.3 Assignment
+CSD 340
+2.16.25
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <script>
+        let var1 = "Jo";
+        let var2 = "Meg";
+        let var3 = "Amy";
+        let var4 = "Beth";
+
+        function replaceVar(spanId, word) {
+            document.getElementById(spanId).innerHTML = word;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 9.3 - JavaScript - Part 1</h1>
+        <h2>From Alcott's Little Women:</h2>
+
+        <p class="intro">
+            "Christmas won't be Christmas without any presents," grumbled <span id="span1">______</span>, lying on the rug.
+            "It's so dreadful to be poor!" sighed <span id="span2">______</span>, looking down at her old dress.
+            "I don't think it's fair for some girls to have plenty of pretty things, and other girls nothing at all," added little <span id="span3">______</span>, with an injured sniff.
+            "We've got Father and Mother, and each other," said <span id="span4">______</span> contentedly from her corner.
+        </p> 
+        
+        <p>
+            The four young faces on which the firelight shone brightened at the cheerful words but darkened again as Jo said sadly, "We haven't got Father, and shall not have him for a long time." She didn't say "perhaps never," but each silently added it, thinking of Father far away, where the fighting was. None of them spoke for a minute; then Meg said, in an altered tone, "You know the reason Mother proposed not having any presents this Christmas was because it is going to be a hard winter for everyone, and she thinks we ought not to spend money for pleasure when our men are suffering so in the army. We can't do much, but we can make our little sacrifices and ought to do it gladly."
+        </p>
+        
+        <p>
+            Just then a knock sounded at the door, and Hannah, the old servant, came in with a letter in her hand. "It's one of them letters from the army, I reckon," she said, handing it to Mrs. March, who opened it quickly, her face flushing as she read. "It's from Father!" she exclaimed. "He is well, but he misses us terribly and sends his love. He says he is proud of his little women and hopes they will be brave and cheerful." The girls crowded around her, reading over her shoulder, and for a moment, the room was filled with exclamations of joy and relief.
+        </p>
+
+        <p>
+            <button onclick="replaceVar('span1', var1)">Insert 'Jo'</button>
+            <button onclick="replaceVar('span2', var2)">Insert 'Meg'</button>
+            <button onclick="replaceVar('span3', var3)">Insert 'Amy'</button>
+            <button onclick="replaceVar('span4', var4)">Insert 'Beth'</button>
+        </p>
+        
+        <hr />
+    </div>
+</body>
+</html>
