@@ -1,0 +1,76 @@
+<!--
+Rachel Theis
+Module 11.2 Assignment
+CSD 340
+3.2.25
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .add-btn { background-color: green; }
+        .delete-btn { background-color: red; }
+        .display-btn { background-color: blue; }
+    </style>
+    <script>
+        let items = [];
+
+        function addToDo() {
+            let item = document.getElementById("itemInput").value;
+            if (item) {
+                items.push(item);
+                alert(`Added: ${item}`);
+                document.getElementById("itemInput").value = "";
+            }
+        }
+
+        function deleteLast() {
+            if (items.length > 0) {
+                let removedItem = items.pop();
+                alert(`Deleted last entry: ${removedItem}`);
+            }
+        }
+
+ 
+        function display() {
+    		let displayArea = document.getElementById("displayArea");
+   			displayArea.innerHTML = ""; 
+    		if (items.length === 0) {
+        		displayArea.innerHTML = "Nothing entered in the list yet";
+    		} else {
+        		let list = "<ul>";
+        		items.forEach((item, index) => {
+            		list += `<li>Item ${index + 1} = ${item}</li>`;
+        		});
+        		list += "</ul>";
+        		displayArea.innerHTML = list;
+    		}
+		}
+
+            
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        <p>Welcome to the to-do list! Enter your tasks in the text box, then add by clicking on the "add" button. To view your list, select the display button.</p>
+        <input type="text" id="itemInput" placeholder="Enter an item" />
+        <button class="add-btn" onclick="addToDo()">Add</button>
+        <button class="delete-btn" onclick="deleteLast()">Delete Last Entry</button>
+        <button class="display-btn" onclick="display()">Display</button>
+        <div id="displayArea"></div>
+    </div>
+    </div>
+    <a href="index.html">Back to the landing page</a>
+</body>
+</html>
